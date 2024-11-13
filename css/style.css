@@ -1,10 +1,97 @@
-body {
-    font-family: Arial, sans-serif;
+body { 
     background-color: #000;
-    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poiret One', sans-serif;
 }
 
+/* HEADER */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #000;
-    padding: 20px 40px;
+    padding: 1% 1%;
+}
+
+/* LOGO */
+.logo img {
+    max-height: 1%;
+}
+
+/* NAV */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 1%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poiret One', sans-serif;
+}
+
+nav ul li a[href="#mixtape"] {
+    color: #E7010A;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 3%;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 20%;
+    height: 20%;
+}
+
+.social-icons img {
+    width: 100%;
+    height: auto;
+}
+
+/* MAIN */
+main {
+    padding: 2% 2%;
+}
+
+
+{
+
+}
+
+h1, h2, span {
+    color: white;
+}
+
+div.contact a {
+	text-decoration: none;
+	color: #E7010A;
+	font-family: 'Play', Bold;
+}
+
+footer {
+	font-family: 'Montserrat', Thin;
+}
+
+div.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 2%;
+    background-color: #000;
+}
+
+div.footer-content a {
+    text-decoration: none;
+    color: white;
+    margin: 0 2%;
 }
