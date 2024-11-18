@@ -201,10 +201,6 @@ div.footer-content a {
         display: block;
     }
 
-    input[type="checkbox"]:checked+.nav-list {
-        display: flex;
-    }
-
     .social-icons {
         display: none;
     }
