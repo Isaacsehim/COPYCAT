@@ -12,13 +12,13 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #000;
-    padding: 2% 4%;
+    padding: 1.5% 4%;
     position: sticky;
 }
 
 /* LOGO */
 .logo img {
-    max-height: 8rem;
+    max-height: 6rem;
 }
 
 /* NAVIGATION */
@@ -29,25 +29,24 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 20%;
+    gap: 6%;
 }
 
 nav ul li {
     margin: 0;
+    flex-grow: 1;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-family: 'Poiret One', sans-serif;
+    font-size: 1.2vw;
 }
 
 nav ul li a[href="#mixtape"] {
     color: #E7010A;
-}
-
-nav ul li a:hover {
-    color: #E7010A;
+    font-weight: bold;
 }
 
 /* SOCIAL ICONS */
@@ -60,8 +59,8 @@ nav ul li a:hover {
 
 .social-icons a {
     display: inline-block;
-    width: 3rem;
-    height: 3rem;
+    width: 2.6vw;
+    height: 2.6vw;
 }
 
 .social-icons img {
@@ -75,12 +74,13 @@ main {
     color: #E7010A;
 }
 
-/* MIXTAPE SECTION */
-h1, h2 {
+/* MIXTAPE */
+h1,
+h2 {
     text-align: center;
     margin-bottom: 4%;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 1.7rem;
 }
 
 .mixtape-gallery {
@@ -88,51 +88,46 @@ h1, h2 {
     grid-template-columns: repeat(6, auto);
     gap: 2%;
     justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.mixtape-gallery2 {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 2%;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.mixtape-cardm {
+    display: flex;
+    justify-content: center;
+    height: 18rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 .mixtape-card {
     background-color: #1a1a1a;
     overflow: hidden;
-    flex-basis: calc(33.33% - 4%);
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mixtape-card iframe {
     width: 100%;
-    height: 10rem;
+    height: 100%;
     border: none;
 }
 
-/* RESPONSIV */
-@media (max-width: 1024px) {
-    nav ul {
-        width: 80%;
-    }
-
-    .mixtape-card {
-        flex-basis: calc(50% - 4%);
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 5%;
-    }
-
-    .social-icons {
-        grid-template-columns: repeat(3, auto);
-    }
-
-    .mixtape-card {
-        flex-basis: 100%;
-    }
-}
-
-/* CONTACT SECTION */
+/* CONTACT */
 div.contact {
     text-align: center;
-    margin: 6rem 0;
+    margin-top: 5%;
 }
 
 div.contact a {
@@ -147,15 +142,16 @@ footer {
     background-color: #000;
     color: white;
     padding: 4rem 5%;
+    text-align: center;
 }
 
 div.footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-family: 'Montserrat', sans-serif;
-    flex-wrap: wrap;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 2%;
+    font-size: small;
 }
 
 div.footer-content a {
@@ -163,6 +159,80 @@ div.footer-content a {
     color: white;
 }
 
-div.footer-content a:hover {
-    color: #E7010A;
+/* RESPONSIV */
+@media (max-width: 1024px) {
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo img {
+        max-height: 8rem;
+        width: auto;
+    }
+
+    .mixtape-gallery,
+    .mixtape-gallery2,
+    .mixtape-gallery-millesime {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mixtape-card {
+        height: auto;
+    }
+
+    .mixtape-cardm {
+        height: auto;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+        display: block;
+    }
+
+    input[type="checkbox"]:checked+.nav-list {
+        display: flex;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 24px;
+        width: 30px;
+    }
+
+    .hamburger-menu .bar {
+        background-color: white;
+        height: 4px;
+        width: 30px;
+    }
+
+    div.footer-content {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        grid-template-columns: 1fr;
+        gap: 2%;
+        text-align: center;
+    }
 }
